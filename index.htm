@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Student Class</h1>
+    <ul id="list"></ul>
+    <script>
+        let list = document.getElementById("list");
+        class user {
+            constructor(name, age, major) {
+                this.name = name;
+                this.age = age;
+                this.major = major;
+            }
+            showUser() {
+                return `${this.name} (${this.age} yas ) - Kurs: ${this.major}`;
+            }
+        }
+        let allusers = [
+            new user("Rafael", 20, "Matematika"),
+            new user("Sema", 22, "Iqtisadiyyat"),
+            new user("Kamal", 21, "Muhendislik")
+        ]
+        for (let i = 0; i < allusers.length; i++) {
+            const element = allusers[i];
+            list.innerHTML += `<li>${element.showUser()}</li>`;
+        }
+
+    </script>
+</body>
+
+</html>
